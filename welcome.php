@@ -7,7 +7,8 @@ error_log($_SESSION['email'], 3, 'php://stderr');
 // Check if the username session variable is set
 if (isset($_SESSION['email'])) {
     $email = htmlspecialchars($_SESSION['email']);
-    echo "Hi " . $email;
+    echo "Hello :  " . $email . "<br>";
+    echo "<p> <a href='login.html'>&lt;GO BACK&gt;</a></p>";
 } else {
     // Redirect to login page if accessed directly without logging in
     header("Location: index.html");
